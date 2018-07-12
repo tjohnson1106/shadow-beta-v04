@@ -1,7 +1,9 @@
 defmodule ShadowServerWeb.Resolvers.Posts do
-   def photos(_, _, _) do
-      {:ok, ShadowServer.Posts.list_photos}
+  def photos(_, _, _) do
+    {:ok, ShadowServer.Posts.list_photos()}
+  end
 
-   end
-    
+  def photo(_, %{id: id}, _) do
+    {:ok, ShadowServer.Posts.get_photo!(id)}
+  end
 end
