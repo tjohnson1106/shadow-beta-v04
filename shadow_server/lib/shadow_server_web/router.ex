@@ -12,7 +12,7 @@ defmodule ShadowServerWeb.Router do
     schema: ShadowServerWeb.Schema
 
     if Mix.env == :dev do
-      forward "/graphiql", Absinthe.Plug.GraphiQl,
+      forward "/graphiql", Absinthe.Plug.GraphiQL,
       schema: ShadowServerWeb.Schema
 
 
